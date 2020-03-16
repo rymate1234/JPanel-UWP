@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="JPanel_W10.FileView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JPanel_W10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="0" Margin="10,10,10,0" x:Name="Container" VerticalScrollMode="Auto" >
+            <TextBox x:Name="FileEditor" FontFamily="Consolas" AcceptsReturn="True" InputScope="Text"/>
+        </ScrollViewer>
+        <Grid Grid.Row="1" Margin="10"  >
+            <Button x:Name="cancelButton" Content="Cancel Editing" />
+            <Button x:Name="saveButton" Content="Save File" HorizontalAlignment="Right" Click="SaveFile" />
+        </Grid>
+    </Grid>
+</Page>

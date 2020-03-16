@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="JPanel_W10.ConsolePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JPanel_W10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ScrollViewer x:Name="consoleScroll" Margin="10,10,10,47">
+            <ItemsControl x:Name="consoleView" ItemsSource="{Binding}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords" FontFamily="Consolas" LineHeight="8" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+        <TextBox x:Name="cmdBox" Margin="10,0,10,10" TextWrapping="Wrap" PlaceholderText="Type a command here..." Height="32" VerticalAlignment="Bottom" KeyDown="CmdInput_KeyDown"/>
+
+    </Grid>
+</Page>

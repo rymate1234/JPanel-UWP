@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="JPanel_W10.StatsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JPanel_W10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}">
+        <StackPanel Padding="10" MaxWidth="400" HorizontalAlignment="Left" Width="400">
+            <TextBlock Text="CPU Usage" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,5" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <TextBlock x:Name="cpuText" Text="Loading..." Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <ProgressBar x:Name="cpuBar" Height="10" VerticalAlignment="Stretch" Margin="0,0,0,20" />
+
+            <TextBlock Text="RAM Usage" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,5" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <TextBlock x:Name="ramText" Text="Loading..." Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <ProgressBar x:Name="ramBar" Height="10" VerticalAlignment="Stretch" Margin="0,0,0,20" />
+
+            <TextBlock Text="Server TPS" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,5" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <TextBlock x:Name="tpsText" Text="Loading..." Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+            <ProgressBar x:Name="tpsBar" Height="10" VerticalAlignment="Stretch" Margin="0,0,0,20" Maximum="20" SmallChange="0" />
+        </StackPanel>
+
+    </Grid>
+</Page>
